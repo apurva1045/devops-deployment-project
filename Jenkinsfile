@@ -2,12 +2,14 @@ pipeline {
     agent any
 
     stages {
+        HEAD
         stage('Clone Code') {
             steps {
                 git 'https://github.com/apurva1045/devops-deployment-project.git'
             }
         }
 
+        feature-ui
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t myflaskapp .'
