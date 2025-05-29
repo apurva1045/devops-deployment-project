@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git 'https://github.com/apurva1045/devops-deployment-project.git'
+                git branch: 'main', url: 'https://github.com/apurva1045/devops-deployment-project.git'
             }
         }
         stage('Build Docker Image') {
